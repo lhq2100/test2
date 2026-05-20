@@ -13,13 +13,11 @@ export const Route = createFileRoute("/sources")({
 });
 
 const SOURCES = [
-  "American Academy of Pediatrics, 2023: Screen time and adolescent mental health — associations with anxiety and depression at 4+ hours daily.",
-  "Journal of Affective Disorders, 2022: Doomscrolling and psychological wellbeing — correlation with anxiety symptoms (r ≈ 0.62).",
-  "Sleep Health (National Sleep Foundation), 2021: Bedtime social media use and adolescent sleep outcomes; 70% in-bed phone use.",
-  "Health Behavior and Policy Review, 2023: Longitudinal study linking social media addiction with increased doomscrolling in adolescents.",
-  "American Psychological Association, 2022: Stress in America — adolescent and young adult mental health.",
-  "Common Sense Media, 2023: The Common Sense Census — Media Use by Tweens and Teens.",
-  "Canadian Paediatric Society, 2023: Digital media: Promoting healthy screen use in school-aged children and adolescents.",
+  'American Psychological Association. "Students Experiencing Anxiety." American Psychological Association, 25 Feb. 2025, www.apa.org/ed/schools/primer/anxiety.',
+  'Gardener, Deidre-Ann K. "EQAO Preparation and the Effects on In-Classroom Instruction." Scholaris, University of Toronto, Apr. 2017, utoronto.scholaris.ca/server/api/core/bitstreams/b8b295fe-7b98-43de-a83b-07baffc5e07a/content.',
+  'Government of Ontario. "School Information and Student Demographics." Ontario Data Catalogue, 6 Mar. 2026. Accessed 11 May 2026.',
+  'School Mental Health Ontario. "About Student Mental Health in Ontario." School Mental Health Ontario, 1 Jan. 2025, smho-smso.ca/about-student-mental-health-in-ontario/.',
+  'Van De Wal, Lianne. Student Perceptions of Literacy after the Ontario Secondary School Literacy Course: A Qualitative Inquiry. Library and Archives Canada / Bibliothèque et Archives Canada, 2013.',
 ];
 
 function Page() {
