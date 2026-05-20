@@ -3,41 +3,41 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Standardized Testing & Student Anxiety in Ontario" },
-      { name: "description", content: "How societal beliefs about Ontario's EQAO, OSSLT, and final exams shape student well-being and academic performance." },
-      { property: "og:title", content: "Standardized Testing & Student Anxiety in Ontario" },
-      { property: "og:description", content: "Exploring how testing culture impacts students, through student and teacher eyes." },
+      { title: "Doomscrolling & Teen Mental Health" },
+      { name: "description", content: "How compulsive scrolling fuels anxiety, depression, sleep loss, and worse school performance in teens." },
+      { property: "og:title", content: "Doomscrolling & Teen Mental Health" },
+      { property: "og:description", content: "The cost of the infinite feed — and how to log off without losing out." },
     ],
   }),
   component: Home,
 });
 
 const STATS = [
-  { label: "Test Anxiety Prevalence", value: "40–60%", caption: "of Ontario students negatively affected by test anxiety" },
-  { label: "Performance Gap", value: "12–15", caption: "percentile points lower scored by high-anxiety students" },
-  { label: "Post-Secondary Stress", value: "45%", caption: "of Canadian students report above-average academic stress" },
+  { label: "Anxiety Risk", value: "45%", caption: "higher odds of anxiety in teens with 4+ hours of daily screen time" },
+  { label: "Depression Risk", value: "65%", caption: "higher likelihood of depression in youth with 4+ hours of screen time" },
+  { label: "Sleep Lost", value: "70%", caption: "of people check social media in bed — more scrolling, worse sleep" },
 ];
 
 function Home() {
   return (
     <div className="space-y-24">
       <section className="pt-8">
-        <p className="text-sm uppercase tracking-[0.25em] text-primary mb-6">Perspectives · Issue 03</p>
+        <p className="text-sm uppercase tracking-[0.25em] text-primary mb-6">Perspectives · Issue 04</p>
         <h1 className="text-5xl sm:text-7xl font-bold leading-[1.05] max-w-4xl">
-          Standardized Testing<br />
-          & Student <span className="text-primary">Anxiety</span>
+          The Cost of<br />
+          <span className="text-primary">Doomscrolling</span>
         </h1>
         <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
-          How societal beliefs about Ontario's EQAO, OSSLT, and final exams shape
-          student well-being and academic performance — seen through student and
-          teacher eyes.
+          Compulsively consuming negative, stressful content online is quietly
+          reshaping teen anxiety, sleep, and school performance. Here's what
+          the research says — and what teens can actually do about it.
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
-          <Link to="/the-issue" className="rounded-md bg-primary px-5 py-3 text-primary-foreground font-semibold hover:opacity-90 transition">
+          <Link to="/issue" className="rounded-md bg-primary px-5 py-3 text-primary-foreground font-semibold hover:opacity-90 transition">
             Read the issue
           </Link>
-          <Link to="/perspectives" className="rounded-md border border-border px-5 py-3 font-semibold hover:bg-secondary transition">
-            Hear the voices
+          <Link to="/solution" className="rounded-md border border-border px-5 py-3 font-semibold hover:bg-secondary transition">
+            See the solutions
           </Link>
         </div>
       </section>
@@ -54,9 +54,9 @@ function Home() {
 
       <section className="grid md:grid-cols-3 gap-6">
         {[
-          { to: "/the-issue", title: "What is this issue?", body: "Three high-stakes tests sit at the heart of Ontario schooling — EQAO, OSSLT, and final exams." },
-          { to: "/quality-education", title: "Quality Education", body: "Inclusive, equitable education and lifelong learning opportunities for all (UN SDG 4)." },
-          { to: "/beliefs-values", title: "Beliefs & Values", body: "Why society's faith in test scores quietly reshapes what students believe about themselves." },
+          { to: "/issue", title: "What is doomscrolling?", body: "Compulsive consumption of negative content — and why teen brains are uniquely vulnerable to it." },
+          { to: "/solution", title: "What helps", body: "Evidence-based strategies to break the loop: screen limits, sleep hygiene, and replacement habits." },
+          { to: "/perspectives", title: "Why teens scroll", body: "FOMO, loneliness, stress relief — the reasons teens reach for the feed, even when it hurts." },
         ].map((c) => (
           <Link key={c.to} to={c.to} className="card-glow rounded-xl p-8 group hover:border-primary transition">
             <h3 className="text-2xl font-bold">{c.title}</h3>

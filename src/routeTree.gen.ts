@@ -9,26 +9,20 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TheIssueRouteImport } from './routes/the-issue'
 import { Route as SourcesRouteImport } from './routes/sources'
-import { Route as QualityEducationRouteImport } from './routes/quality-education'
+import { Route as SolutionRouteImport } from './routes/solution'
 import { Route as PerspectivesRouteImport } from './routes/perspectives'
-import { Route as BeliefsValuesRouteImport } from './routes/beliefs-values'
+import { Route as IssueRouteImport } from './routes/issue'
 import { Route as IndexRouteImport } from './routes/index'
 
-const TheIssueRoute = TheIssueRouteImport.update({
-  id: '/the-issue',
-  path: '/the-issue',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SourcesRoute = SourcesRouteImport.update({
   id: '/sources',
   path: '/sources',
   getParentRoute: () => rootRouteImport,
 } as any)
-const QualityEducationRoute = QualityEducationRouteImport.update({
-  id: '/quality-education',
-  path: '/quality-education',
+const SolutionRoute = SolutionRouteImport.update({
+  id: '/solution',
+  path: '/solution',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PerspectivesRoute = PerspectivesRouteImport.update({
@@ -36,9 +30,9 @@ const PerspectivesRoute = PerspectivesRouteImport.update({
   path: '/perspectives',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BeliefsValuesRoute = BeliefsValuesRouteImport.update({
-  id: '/beliefs-values',
-  path: '/beliefs-values',
+const IssueRoute = IssueRouteImport.update({
+  id: '/issue',
+  path: '/issue',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -49,74 +43,44 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/beliefs-values': typeof BeliefsValuesRoute
+  '/issue': typeof IssueRoute
   '/perspectives': typeof PerspectivesRoute
-  '/quality-education': typeof QualityEducationRoute
+  '/solution': typeof SolutionRoute
   '/sources': typeof SourcesRoute
-  '/the-issue': typeof TheIssueRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/beliefs-values': typeof BeliefsValuesRoute
+  '/issue': typeof IssueRoute
   '/perspectives': typeof PerspectivesRoute
-  '/quality-education': typeof QualityEducationRoute
+  '/solution': typeof SolutionRoute
   '/sources': typeof SourcesRoute
-  '/the-issue': typeof TheIssueRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/beliefs-values': typeof BeliefsValuesRoute
+  '/issue': typeof IssueRoute
   '/perspectives': typeof PerspectivesRoute
-  '/quality-education': typeof QualityEducationRoute
+  '/solution': typeof SolutionRoute
   '/sources': typeof SourcesRoute
-  '/the-issue': typeof TheIssueRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/beliefs-values'
-    | '/perspectives'
-    | '/quality-education'
-    | '/sources'
-    | '/the-issue'
+  fullPaths: '/' | '/issue' | '/perspectives' | '/solution' | '/sources'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/beliefs-values'
-    | '/perspectives'
-    | '/quality-education'
-    | '/sources'
-    | '/the-issue'
-  id:
-    | '__root__'
-    | '/'
-    | '/beliefs-values'
-    | '/perspectives'
-    | '/quality-education'
-    | '/sources'
-    | '/the-issue'
+  to: '/' | '/issue' | '/perspectives' | '/solution' | '/sources'
+  id: '__root__' | '/' | '/issue' | '/perspectives' | '/solution' | '/sources'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BeliefsValuesRoute: typeof BeliefsValuesRoute
+  IssueRoute: typeof IssueRoute
   PerspectivesRoute: typeof PerspectivesRoute
-  QualityEducationRoute: typeof QualityEducationRoute
+  SolutionRoute: typeof SolutionRoute
   SourcesRoute: typeof SourcesRoute
-  TheIssueRoute: typeof TheIssueRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/the-issue': {
-      id: '/the-issue'
-      path: '/the-issue'
-      fullPath: '/the-issue'
-      preLoaderRoute: typeof TheIssueRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/sources': {
       id: '/sources'
       path: '/sources'
@@ -124,11 +88,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SourcesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/quality-education': {
-      id: '/quality-education'
-      path: '/quality-education'
-      fullPath: '/quality-education'
-      preLoaderRoute: typeof QualityEducationRouteImport
+    '/solution': {
+      id: '/solution'
+      path: '/solution'
+      fullPath: '/solution'
+      preLoaderRoute: typeof SolutionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/perspectives': {
@@ -138,11 +102,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PerspectivesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/beliefs-values': {
-      id: '/beliefs-values'
-      path: '/beliefs-values'
-      fullPath: '/beliefs-values'
-      preLoaderRoute: typeof BeliefsValuesRouteImport
+    '/issue': {
+      id: '/issue'
+      path: '/issue'
+      fullPath: '/issue'
+      preLoaderRoute: typeof IssueRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -157,11 +121,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BeliefsValuesRoute: BeliefsValuesRoute,
+  IssueRoute: IssueRoute,
   PerspectivesRoute: PerspectivesRoute,
-  QualityEducationRoute: QualityEducationRoute,
+  SolutionRoute: SolutionRoute,
   SourcesRoute: SourcesRoute,
-  TheIssueRoute: TheIssueRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
