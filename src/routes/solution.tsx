@@ -3,49 +3,51 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/solution")({
   head: () => ({
     meta: [
-      { title: "Solutions — Breaking the Doomscroll Loop" },
-      { name: "description", content: "Evidence-based ways to reduce doomscrolling: screen limits, sleep hygiene, replacement habits, and support." },
-      { property: "og:title", content: "Solutions — Breaking the Doomscroll Loop" },
-      { property: "og:description", content: "Practical, research-backed strategies for teens to take back the feed." },
+      { title: "Solutions — Rethinking Standardized Testing" },
+      { name: "description", content: "How Ontario can reduce test anxiety: multiple forms of assessment, coping strategies, equity, and a new story around scores." },
+      { property: "og:title", content: "Solutions — Rethinking Standardized Testing" },
+      { property: "og:description", content: "Practical, evidence-based changes for students, schools, and policymakers." },
     ],
   }),
   component: Page,
 });
 
 const STRATEGIES = [
-  { title: "Set screen-time limits", body: "Use built-in iOS/Android limits to cap the apps that pull you in hardest. A daily ceiling — even a generous one — interrupts the autopilot." },
-  { title: "No phones 1 hour before sleep", body: "Blue light delays melatonin and stressful content keeps the brain alert. Charging the phone outside the bedroom protects the single biggest lever on mood and grades." },
-  { title: "Disable notifications", body: "Each ping is a fresh invitation to scroll. Turning off non-essential notifications removes the trigger before it starts." },
-  { title: "Replace, don't just remove", body: "Substitute scrolling with exercise, reading, music, or time with friends. The brain still wants stimulation — give it a healthier source." },
-  { title: "Schedule news checking", body: "Pick one or two times a day to catch up on the news. You stay informed without marinating in it for hours." },
-  { title: "Use digital wellbeing tools", body: "Greyscale mode, app timers, and focus modes make the feed less appealing and less accessible during study or sleep windows." },
-  { title: "Seek support when it's persistent", body: "If anxiety, depression, or sleep issues last more than a few weeks, talk to a parent, school counsellor, or therapist. Doomscrolling can worsen existing conditions — professional support helps." },
+  { title: "Use multiple forms of assessment", body: "Portfolios, projects, and ongoing classroom observation give a much fuller and fairer picture of what a student knows and can do than a single test ever can." },
+  { title: "Teach students how to handle stress", body: "Ontario schools should introduce evidence-based coping strategies in the weeks leading up to the OSSLT and final exams — not leave students to figure it out alone." },
+  { title: "Build real equity into the system", body: "ELL and lower-income students need meaningful accommodations. Until those exist, EQAO results will continue to measure circumstance as much as learning." },
+  { title: "Change the story around scores", body: "Educators, parents, and policymakers all have a role in making sure students hear clearly that a test result is one piece of information about one day — not a verdict on who they are." },
+  { title: "Stop ranking schools by EQAO", body: "Publishing EQAO scores as school rankings turns individual students into proxies for their community. Reporting trends without rankings keeps the data useful without weaponizing it." },
+  { title: "Lower the stakes of the OSSLT", body: "Pairing the literacy test with alternate routes to graduation (such as the OSSLC) reduces the single-point-of-failure pressure that fuels the most acute anxiety." },
+  { title: "Resource student mental health", body: "School Mental Health Ontario already provides frameworks — but counsellors, quiet spaces, and check-ins need to be fully staffed and accessible before, during, and after testing windows." },
 ];
 
 const QUICK = [
-  "Charge your phone outside the bedroom tonight.",
-  "Turn off notifications for one app right now.",
-  "Pick a 30-minute window tomorrow that's screen-free.",
-  "Unfollow three accounts that make you feel worse.",
+  "Treat a single test score as one data point, not a verdict.",
+  "Talk to your child about effort and process — not just results.",
+  "Ask your school what mental-health supports run during testing weeks.",
+  "Push for assessment portfolios alongside high-stakes tests.",
 ];
 
 function Page() {
   return (
     <div className="space-y-20">
       <header>
-        <p className="text-sm uppercase tracking-[0.25em] text-primary mb-4">Solutions</p>
-        <h1 className="text-5xl sm:text-6xl font-bold leading-tight max-w-3xl">Breaking the loop</h1>
+        <p className="text-sm uppercase tracking-[0.25em] text-primary mb-4">What Should Change</p>
+        <h1 className="text-5xl sm:text-6xl font-bold leading-tight max-w-3xl">Tests can stay. The weight has to go.</h1>
         <p className="mt-6 max-w-3xl text-lg text-muted-foreground">
-          Doomscrolling is engineered to be hard to stop — but it's not unbeatable.
-          These strategies are drawn from sleep research, adolescent psychology,
-          and clinical guidance for anxiety and depression. None of them require
-          deleting every app. Most of them just need <span className="text-highlight font-semibold">one
-          intentional friction point</span> between you and the feed.
+          Standardized testing isn't inherently the problem — the
+          <span className="text-highlight font-semibold"> societal beliefs that
+          turn a score into a measure of a person's worth</span> are. These
+          changes come from Ontario classroom research, adolescent
+          psychology, and equity work, and most of them don't require
+          dismantling EQAO or the OSSLT. They require changing what we make
+          the scores mean.
         </p>
       </header>
 
       <section>
-        <h2 className="text-3xl font-bold mb-8">Evidence-based strategies</h2>
+        <h2 className="text-3xl font-bold mb-8">Evidence-based changes</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {STRATEGIES.map((s, i) => (
             <article key={s.title} className="card-glow rounded-xl p-8">
@@ -58,7 +60,7 @@ function Page() {
       </section>
 
       <section className="card-glow rounded-2xl p-10">
-        <p className="text-xs uppercase tracking-widest text-primary">Start Tonight</p>
+        <p className="text-xs uppercase tracking-widest text-primary">Start This Week</p>
         <h2 className="mt-3 text-3xl font-bold">Four small moves</h2>
         <ul className="mt-8 space-y-4">
           {QUICK.map((q) => (

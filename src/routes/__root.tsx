@@ -23,7 +23,7 @@ function Header() {
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-6">
         <Link to="/" className="font-display text-lg font-bold tracking-tight">
-          Doomscroll<span className="text-primary">.</span>
+          High-Stakes<span className="text-primary">.</span>
         </Link>
         <nav className="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm">
           {NAV.map((n) => (
@@ -47,7 +47,7 @@ function Footer() {
   return (
     <footer className="border-t border-border mt-24">
       <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-muted-foreground flex flex-col sm:flex-row justify-between gap-4">
-        <p>© 2026 Doomscrolling & Teen Mental Health.</p>
+        <p>© 2026 Standardized Testing & Ontario Students.</p>
         <Link to="/sources" className="hover:text-foreground">Works Cited →</Link>
       </div>
     </footer>
@@ -88,8 +88,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Doomscrolling & Teen Mental Health" },
-      { name: "description", content: "How doomscrolling affects teen anxiety, sleep, school performance, and mental health — and what to do about it." },
+      { title: "Standardized Testing & Ontario Students" },
+      { name: "description", content: "How EQAO, OSSLT, and final exams shape societal beliefs, student well-being, and academic performance in Ontario." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

@@ -3,19 +3,19 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Doomscrolling & Teen Mental Health" },
-      { name: "description", content: "How compulsive scrolling fuels anxiety, depression, sleep loss, and worse school performance in teens." },
-      { property: "og:title", content: "Doomscrolling & Teen Mental Health" },
-      { property: "og:description", content: "The cost of the infinite feed — and how to log off without losing out." },
+      { title: "Standardized Testing & Ontario Students" },
+      { name: "description", content: "How EQAO, OSSLT, and final exams shape societal beliefs, student well-being, and academic performance in Ontario." },
+      { property: "og:title", content: "Standardized Testing & Ontario Students" },
+      { property: "og:description", content: "The pressure behind the scores — and what should change." },
     ],
   }),
   component: Home,
 });
 
 const STATS = [
-  { label: "Anxiety Risk", value: "45%", caption: "higher odds of anxiety in teens with 4+ hours of daily screen time" },
-  { label: "Depression Risk", value: "65%", caption: "higher likelihood of depression in youth with 4+ hours of screen time" },
-  { label: "Sleep Lost", value: "70%", caption: "of people check social media in bed — more scrolling, worse sleep" },
+  { label: "Test Anxiety", value: "40–60%", caption: "of Ontario students are negatively affected by test anxiety" },
+  { label: "Performance Gap", value: "12–15", caption: "points lower scored on average by high-anxiety students" },
+  { label: "Academic Stress", value: "45%", caption: "of Canadian students report above-average academic stress" },
 ];
 
 function Home() {
@@ -24,20 +24,21 @@ function Home() {
       <section className="pt-8">
         <p className="text-sm uppercase tracking-[0.25em] text-primary mb-6">Perspectives · Issue 04</p>
         <h1 className="text-5xl sm:text-7xl font-bold leading-[1.05] max-w-4xl">
-          The Cost of<br />
-          <span className="text-primary">Doomscrolling</span>
+          The Weight of<br />
+          <span className="text-primary">One Score</span>
         </h1>
         <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
-          Compulsively consuming negative, stressful content online is quietly
-          reshaping teen anxiety, sleep, and school performance. Here's what
-          the research says — and what teens can actually do about it.
+          EQAO, the OSSLT, and Grade 11–12 finals carry enormous social weight in
+          Ontario — shaping how students see themselves long after the test
+          ends. Here's what the research says, what students and teachers
+          report, and what should change.
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
           <Link to="/issue" className="rounded-md bg-primary px-5 py-3 text-primary-foreground font-semibold hover:opacity-90 transition">
             Read the issue
           </Link>
           <Link to="/solution" className="rounded-md border border-border px-5 py-3 font-semibold hover:bg-secondary transition">
-            See the solutions
+            See what should change
           </Link>
         </div>
       </section>
@@ -45,7 +46,7 @@ function Home() {
       <section>
         <p className="text-sm uppercase tracking-[0.25em] text-primary mb-4">Watch · Intro</p>
         <h2 className="text-3xl sm:text-4xl font-bold mb-6 max-w-3xl">
-          A quick look at why doomscrolling matters
+          A quick look at why this matters
         </h2>
         <div className="card-glow rounded-xl overflow-hidden">
           <video
@@ -75,9 +76,9 @@ function Home() {
 
       <section className="grid md:grid-cols-3 gap-6">
         {[
-          { to: "/issue", title: "What is doomscrolling?", body: "Compulsive consumption of negative content — and why teen brains are uniquely vulnerable to it." },
-          { to: "/solution", title: "What helps", body: "Evidence-based strategies to break the loop: screen limits, sleep hygiene, and replacement habits." },
-          { to: "/perspectives", title: "Why teens scroll", body: "FOMO, loneliness, stress relief — the reasons teens reach for the feed, even when it hurts." },
+          { to: "/issue", title: "What is the issue?", body: "EQAO, OSSLT, and 30%-weighted finals — and the societal beliefs that turn a score into a verdict on a student." },
+          { to: "/solution", title: "What should change", body: "Multiple forms of assessment, real coping support, equity for ELL and lower-income students, and a new story around scores." },
+          { to: "/perspectives", title: "Voices from inside", body: "An OSSLC teacher and a student describe what high-stakes testing actually feels like — in their own words." },
         ].map((c) => (
           <Link key={c.to} to={c.to} className="card-glow rounded-xl p-8 group hover:border-primary transition">
             <h3 className="text-2xl font-bold">{c.title}</h3>

@@ -3,45 +3,33 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/issue")({
   head: () => ({
     meta: [
-      { title: "The Issue — Doomscrolling" },
-      { name: "description", content: "What doomscrolling is, why teens are vulnerable, and how it harms mental health, sleep, and school performance." },
-      { property: "og:title", content: "The Issue — Doomscrolling" },
-      { property: "og:description", content: "Negative content, dopamine loops, and a developing brain — a bad combination." },
+      { title: "The Issue — Standardized Testing in Ontario" },
+      { name: "description", content: "EQAO, OSSLT, and final exams: the high-stakes tests Ontario students face and the societal beliefs that fuel test anxiety." },
+      { property: "og:title", content: "The Issue — Standardized Testing in Ontario" },
+      { property: "og:description", content: "How a single score became a verdict on a student." },
     ],
   }),
   component: Page,
 });
 
-const IMPACTS = [
-  {
-    name: "ANXIETY",
-    detail: "Teens with 4+ hours of daily screen time have 45% higher odds of anxiety. Doomscrolling studies show a strong correlation (r = 0.62) with anxiety symptoms.",
-    featured: true,
-  },
-  {
-    name: "DEPRESSION",
-    detail: "4+ hours/day of screen time is linked with 65% higher likelihood of depression in youth, plus hopelessness, emotional exhaustion, and existential anxiety.",
-  },
-  {
-    name: "SLEEP",
-    detail: "Only 22% of older teens get 7+ hours of sleep. 70% check social media in bed; 38% of young adults say doomscrolling before bed worsens their sleep.",
-  },
+const TESTS = [
+  { name: "EQAO", detail: "Grades 3 and 6 in math and literacy, plus a Grade 9 math assessment. Results are published and used to rank schools provincially.", featured: true },
+  { name: "OSSLT", detail: "The Grade 10 literacy test. Students must pass it to earn the OSSD diploma — a single test standing between them and graduation." },
+  { name: "FINALS", detail: "Grade 11 and 12 final exams are worth 30% of the course mark. One bad morning can move a final grade by a full letter." },
 ];
 
-const LOOP = [
-  "Social media algorithms surface emotionally intense, negative content because it keeps users watching longer — a system optimized for engagement, not wellbeing.",
-  "The teen brain treats a stream of online threats like real ones. Cortisol rises, the nervous system stays alert, and anxiety becomes a baseline rather than an event.",
-  "Stressful content keeps the brain wired late at night, while blue light delays melatonin. Sleep gets shorter and shallower, which weakens memory and mood the next day.",
-  "Less sleep, more anxiety, and reduced focus then bleed directly into school — poorer studying, weaker recall, and lower performance on EQAO, OSSLT, and final exams.",
+const BELIEFS = [
+  "Tests equal intelligence. When society treats a score as a measure of a person's worth, students stop learning for curiosity and start performing for survival.",
+  "The OSSLT controls your future. Knowing that a single literacy test stands between you and your diploma amplifies anxiety in a way few other school experiences can match.",
+  "EQAO scores define the school. When results are published and used to rank schools publicly, individual students feel the weight of their entire community on their shoulders.",
+  "Parents expect top results. Well-meaning parental pressure compounds the anxiety students already feel — especially for ELL students and those from lower-income households.",
 ];
 
-const EFFECTS = [
-  { title: "Concentration", body: "Adolescent studies link doomscrolling with measurable difficulty concentrating in class and while studying." },
-  { title: "Memory", body: "Poor sleep weakens attention span, retention, and recall during exams — the exact skills tests measure." },
-  { title: "Engagement", body: "Reviews find doomscrolling associated with reduced focus, lower productivity, and worse academic performance overall." },
-  { title: "Self-Image", body: "TikTok and Instagram comparison loops feed body dissatisfaction, lower self-esteem, and FOMO — amplifying anxiety and depression." },
-  { title: "Body", body: "Fatigue, headaches, eye strain, elevated stress hormones, less physical activity, and irregular eating habits." },
-  { title: "Compulsion", body: "Unpredictable algorithmic rewards mirror gambling reinforcement; social media addiction predicts increased doomscrolling over time." },
+const BUILDUP = [
+  "The belief that EQAO and OSSLT scores reflect a student's intelligence creates a dread that builds weeks before test day, disrupting sleep, appetite, and focus.",
+  "Once a student sits down to write, elevated cortisol physically impairs memory retrieval. The anxiety the test produces makes it harder to demonstrate what the student actually knows.",
+  "Students who are still learning English or come from lower-income households carry an extra layer of pressure. Their EQAO scores often reflect those circumstances more than their ability.",
+  "Over time, chronic test anxiety erodes a student's relationship with school entirely. Curiosity gets replaced by survival mode — the opposite of what quality education should feel like.",
 ];
 
 function Page() {
@@ -49,22 +37,20 @@ function Page() {
     <div className="space-y-20">
       <header>
         <p className="text-sm uppercase tracking-[0.25em] text-primary mb-4">The Issue</p>
-        <h1 className="text-5xl sm:text-6xl font-bold leading-tight max-w-3xl">What is doomscrolling?</h1>
+        <h1 className="text-5xl sm:text-6xl font-bold leading-tight max-w-3xl">High-stakes tests, heavy social weight</h1>
         <p className="mt-6 max-w-3xl text-lg text-muted-foreground">
-          Doomscrolling is the compulsive consumption of negative, stressful, or
-          emotionally overwhelming content online — news, TikToks, reels, shorts,
-          comment sections — often for long stretches at a time. Teens are
-          uniquely vulnerable: their brains are still developing self-control
-          and reward systems, while <span className="text-highlight font-semibold">algorithms
-          prioritize the most emotionally intense content</span> because it keeps
-          users engaged longer.
+          Ontario students face a series of standardized tests that have become
+          cultural moments — EQAO in Grades 3, 6, and 9; the OSSLT in Grade 10;
+          and final exams worth 30% of a course mark in Grades 11 and 12.
+          Together, they create the sense that <span className="text-highlight font-semibold">a student's
+          worth, not just their knowledge, is on the line</span>.
         </p>
       </header>
 
       <section>
-        <h2 className="text-3xl font-bold mb-8">Three main impacts</h2>
+        <h2 className="text-3xl font-bold mb-8">The three key tests</h2>
         <div className="grid sm:grid-cols-3 gap-6">
-          {IMPACTS.map((t) => (
+          {TESTS.map((t) => (
             <div
               key={t.name}
               className={`rounded-xl p-8 card-glow ${t.featured ? "ring-2 ring-primary" : ""}`}
@@ -77,9 +63,21 @@ function Page() {
       </section>
 
       <section>
-        <h2 className="text-3xl font-bold mb-8">The doomscroll loop</h2>
+        <h2 className="text-3xl font-bold mb-8">Societal beliefs driving the pressure</h2>
+        <div className="grid sm:grid-cols-2 gap-6">
+          {BELIEFS.map((b, i) => (
+            <div key={i} className="card-glow rounded-xl p-6">
+              <p className="stat-number text-2xl">{String(i + 1).padStart(2, "0")}</p>
+              <p className="mt-3 text-muted-foreground leading-relaxed">{b}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-3xl font-bold mb-8">How anxiety builds</h2>
         <ol className="space-y-6">
-          {LOOP.map((a, i) => (
+          {BUILDUP.map((a, i) => (
             <li key={i} className="card-glow rounded-xl p-6 flex gap-5">
               <span className="stat-number text-3xl shrink-0 w-10">{i + 1}</span>
               <p className="text-muted-foreground leading-relaxed">{a}</p>
@@ -87,31 +85,20 @@ function Page() {
           ))}
         </ol>
         <p className="mt-8 max-w-3xl text-muted-foreground italic">
-          Negative content → stress response → anxiety → more scrolling →
-          increased anxiety. The loop tightens with every refresh.
+          Belief → dread → cortisol spike → impaired recall → worse score →
+          reinforced belief. The cycle tightens with every test.
         </p>
       </section>
 
-      <section>
-        <h2 className="text-3xl font-bold mb-8">Where it shows up</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {EFFECTS.map((e) => (
-            <div key={e.title} className="card-glow rounded-xl p-6">
-              <p className="text-xs uppercase tracking-widest text-primary">{e.title}</p>
-              <p className="mt-3 text-muted-foreground text-sm leading-relaxed">{e.body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className="card-glow rounded-2xl p-10">
-        <p className="text-xs uppercase tracking-widest text-primary">Testing Pathway</p>
-        <h2 className="mt-3 text-3xl font-bold">From feed to failing grade</h2>
+        <p className="text-xs uppercase tracking-widest text-primary">By the Numbers</p>
+        <h2 className="mt-3 text-3xl font-bold">What the data shows</h2>
         <p className="mt-6 text-muted-foreground leading-relaxed max-w-3xl">
-          Doomscrolling → less sleep → more anxiety + reduced focus → poorer
-          studying → lower performance on EQAO, OSSLT, exams, and standardized
-          testing. The line between a midnight scroll and a missed question on
-          test day is shorter than it looks.
+          Between 40 and 60% of Ontario students are negatively affected by test
+          anxiety. High-anxiety students score, on average, 12–15 points lower
+          than their lower-anxiety peers. And 45% of Canadian students report
+          above-average academic stress — a quiet majority carrying the cost of
+          the system they're inside.
         </p>
       </section>
     </div>
