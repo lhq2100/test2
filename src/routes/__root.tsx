@@ -47,7 +47,7 @@ function Footer() {
   return (
     <footer className="border-t border-border mt-24">
       <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-muted-foreground flex flex-col sm:flex-row justify-between gap-4">
-        <p>© 2026 JASON LI.</p>
+        <p>JASON LI</p>
         <Link to="/sources" className="hover:text-foreground">Works Cited →</Link>
       </div>
     </footer>
