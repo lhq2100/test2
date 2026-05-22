@@ -13,12 +13,12 @@ export const Route = createFileRoute("/perspectives")({
 });
 
 const REASONS = [
-  { title: "Fear of missing out", body: "If everyone is online, logging off feels like falling behind socially. Scrolling becomes a way to stay in the room — even when the room is exhausting." },
-  { title: "Distraction", body: "The feed is the easiest way to leave a hard moment. Homework, family stress, a bad day — one swipe and the brain is somewhere else." },
-  { title: "Stress relief", body: "Scrolling feels like rest. It isn't — but the lack of effort is so seductive that teens reach for it the way someone else might reach for a snack." },
-  { title: "Staying informed", body: "Real news lives next to outrage and panic. Trying to stay current pulls teens into an endless stream of crisis they can't actually act on." },
-  { title: "Avoiding school pressure", body: "Studying for EQAO, OSSLT, or finals is uncomfortable. The phone offers immediate relief from that discomfort — and a guaranteed worse outcome later." },
-  { title: "Loneliness", body: "Feeds simulate company. The notifications, the comments, the parasocial connections — they fill a quiet room without actually filling the loneliness." },
+  { title: "Tests equal intelligence", body: "When a score is treated as a measure of a person's worth, students stop learning for curiosity and start performing for survival — every test becomes a verdict." },
+  { title: "The OSSLT controls graduation", body: "Knowing that a single literacy test stands between a student and their OSSD diploma amplifies anxiety in a way few other school experiences can match." },
+  { title: "Schools ranked by EQAO", body: "When results are published and used to rank schools, individual students feel the weight of their entire community on their shoulders on test day." },
+  { title: "Parental expectations", body: "Well-meaning pressure from home compounds the anxiety students already feel — especially for ELL students and those from lower-income households." },
+  { title: "Stigmatized mistakes", body: "When errors are treated as evidence of stupidity rather than learning, students arrive in remedial courses already wounded — exactly what teachers report seeing in the OSSLC." },
+  { title: "30% finals", body: "Grade 11 and 12 final exams worth 30% of the course mark mean one bad morning can move a final grade by a full letter — a single sitting carries disproportionate weight." },
 ];
 
 function Page() {
@@ -77,11 +77,12 @@ function Page() {
       <section className="space-y-8 opacity-90">
         <div>
           <p className="text-xs uppercase tracking-[0.25em] text-primary">Context</p>
-          <h2 className="text-2xl sm:text-3xl font-bold mt-3">Why teens scroll instead of study</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mt-3">What's behind the pressure</h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
-            The same anxiety the quotes above describe often gets routed into
-            the phone. Doomscrolling usually isn't about the content — it's
-            about what teens are trying to escape, soothe, or feel less alone in.
+            The quotes above don't come out of nowhere. They come from a
+            system in which a handful of test scores are made to carry the
+            weight of a student's intelligence, future, and worth. These are
+            the societal beliefs that turn an exam into a verdict.
           </p>
         </div>
 
