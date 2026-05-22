@@ -74,6 +74,20 @@ function Home() {
         ))}
       </section>
 
+      <section className="card-glow rounded-2xl p-10">
+        <p className="text-xs uppercase tracking-widest text-primary">The Argument</p>
+        <h2 className="mt-3 text-3xl font-bold max-w-3xl">Our thesis</h2>
+        <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-3xl">
+          Although standardized testing in Ontario aims to improve
+          accountability and measure achievement,
+          <span className="text-highlight font-semibold"> societal beliefs that
+          test scores define intelligence and success</span> contribute to
+          increased anxiety, lower self-esteem, and performance pressure among
+          students — potentially undermining both mental health and authentic
+          learning.
+        </p>
+      </section>
+
       <section className="grid md:grid-cols-3 gap-6">
         {[
           { to: "/issue", title: "What is the issue?", body: "EQAO, OSSLT, and 30%-weighted finals — and the societal beliefs that turn a score into a verdict on a student." },
