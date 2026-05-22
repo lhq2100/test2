@@ -42,6 +42,27 @@ function Home() {
         </div>
       </section>
 
+      <section>
+        <p className="text-sm uppercase tracking-[0.25em] text-primary mb-4">Watch · Intro</p>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6 max-w-3xl">
+          A quick look at why doomscrolling matters
+        </h2>
+        <div className="card-glow rounded-xl overflow-hidden">
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            className="w-full h-auto block bg-black"
+          >
+            <source src="/intro-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p className="mt-4 text-sm text-muted-foreground max-w-2xl">
+          A short introduction to the topic before you dig into the research below.
+        </p>
+      </section>
+
       <section className="grid sm:grid-cols-3 gap-6">
         {STATS.map((s) => (
           <div key={s.label} className="card-glow rounded-xl p-8">
