@@ -22,10 +22,8 @@ function Home() {
   return (
     <div className="space-y-24">
       <section className="pt-8">
-        <p className="text-sm uppercase tracking-[0.25em] text-primary mb-6">Perspectives · Issue 04</p>
         <h1 className="text-5xl sm:text-7xl font-bold leading-[1.05] max-w-4xl">
-          The Weight of<br />
-          <span className="text-primary">One Score</span>
+          The Effect of Standardized Testing on <span className="text-primary">Ontario Students</span>
         </h1>
         <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
           EQAO, the OSSLT, and Grade 11–12 finals carry enormous social weight in

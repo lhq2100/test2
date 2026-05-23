@@ -26,7 +26,7 @@ function Page() {
     <div className="space-y-24">
       <header>
         <p className="text-sm uppercase tracking-[0.25em] text-primary mb-4">Voices</p>
-        <h1 className="text-5xl sm:text-6xl font-bold leading-tight max-w-3xl">In their own words</h1>
+        <h1 className="text-5xl sm:text-6xl font-bold leading-tight max-w-3xl">Perspectives</h1>
         <p className="mt-6 max-w-3xl text-lg text-muted-foreground">
           Numbers describe the problem. The people inside it describe what it
           actually feels like. Below are the voices we keep coming back to —

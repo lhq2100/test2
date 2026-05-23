@@ -33,8 +33,8 @@ function Page() {
   return (
     <div className="space-y-20">
       <header>
-        <p className="text-sm uppercase tracking-[0.25em] text-primary mb-4">What Should Change</p>
-        <h1 className="text-5xl sm:text-6xl font-bold leading-tight max-w-3xl">Tests can stay. The weight has to go.</h1>
+        <p className="text-sm uppercase tracking-[0.25em] text-primary mb-4">Solutions</p>
+        <h1 className="text-5xl sm:text-6xl font-bold leading-tight max-w-3xl">What Can We Do?</h1>
         <p className="mt-6 max-w-3xl text-lg text-muted-foreground">
           Standardized testing isn't inherently the problem — the
           <span className="text-highlight font-semibold"> societal beliefs that
