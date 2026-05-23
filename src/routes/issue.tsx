@@ -76,13 +76,7 @@ function Page() {
     <div className="space-y-20">
       <header>
         <p className="text-sm uppercase tracking-[0.25em] text-primary mb-4">The Issue</p>
-        <h1 className="text-5xl sm:text-6xl font-bold leading-tight max-w-3xl">High-stakes tests, heavy social weight</h1>
-        <p className="mt-6 max-w-3xl text-lg text-muted-foreground">
-          Ontario students face a series of standardized tests that have become
-          cultural moments. Together, they create the sense that
-          <span className="text-highlight font-semibold"> a student's worth,
-          not just their knowledge, is on the line</span>.
-        </p>
+        <h1 className="text-5xl sm:text-6xl font-bold leading-tight max-w-3xl">What Is The Issue?</h1>
       </header>
 
       <section>
